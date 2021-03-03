@@ -15,22 +15,28 @@ st.write('יש לך 100 נקודות לצורך כך')
 st.write('כל ניחוש מוריד 30 נקודות')
 st.write('כל רמז מוריד 10 נקודות (לחץ על הרמז שברצונך לקבל)')
 score = 100
-selected_person = st.sidebar.selectbox('מי אני?', ['לא ניחשת עדיין', 'איל', 'תמר', 'קובי', 'פוני', 'נדב', 'מאיה', 'מתן ג', 'מתן ב', 'בוריס', 'אלון', 'בוריס', 'אשרי', 'יאיר', 'תמר', 'בועז', 'משה', 'בוריס', 'מאיר'])
+persons_list = ['איל', 'תמר', 'קובי', 'פוני', 'נדב', 'מאיה', 'מתן ג', 'מתן ב', 'בוריס', 'אלון', 'בוריס', 'אשרי', 'יאיר', 'תמר', 'בועז', 'משה', 'בוריס', 'מאיר']
+selected_person = st.sidebar.selectbox('מי אני?', ['לא ניחשת עדיין'].extend(persons_list))
 operation = st.sidebar.subheader('מספר הנקודות שנותרו לך')
 operation = st.sidebar.header(score)
 
 pre_selected_person = str(selected_person)
 if selected_person == 'יאיר':
     st.sidebar.text('כל הכבוד!')
-elif selected_person == pre_selected_person:
-    pass
-elif selected_person != pre_selected_person:
-    score = score - 30
-    operation.header(score)
-    pre_selected_person = str(selected_person)
+else:
+    for person in persons_list:
+        if selected_person == person:
+            score = score - 30
+            operation.header(score)
+# elif selected_person == pre_selected_person:
+#     pass
+# elif selected_person != pre_selected_person:
+#     score = score - 30
+#     operation.header(score)
+#     pre_selected_person = str(selected_person)
 
 col1, col2 = st.beta_columns(2)
-
+st.sidebar.
 score = hint(hint_title='מספר הקילומטרים בין הבית שלך לבית שלי', hint_text='100', col=col1, score=score, operation=operation)
 score = hint(hint_title='מספר האותיות המשותפות לשמות הפרטיים שלנו:', hint_text='1',col=col1, score=score, operation=operation)
 score = hint(hint_title='מספר החדר שלך פחות מספר החדר שלי:', hint_text='',col=col1, score=score, operation = operation)
