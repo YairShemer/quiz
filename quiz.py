@@ -7,6 +7,7 @@ def hint(hint_title, hint_text, col, score, operation):
         operation.header(score)
     else:
         col.header('********')
+    return score
 
 st.title('חידה')
 st.write('הוראות: עליך לנחש מי מחברי התחום כתב לך את החידה הזאת')
@@ -30,12 +31,12 @@ elif selected_person != pre_selected_person:
 
 col1, col2 = st.beta_columns(2)
 
-hint(hint_title='מספר הקילומטרים בין הבית שלך לבית שלי', hint_text='100', col=col1, score=score, operation=operation)
-hint(hint_title='מספר האותיות המשותפות לשמות הפרטיים שלנו:', hint_text='1',col=col1, score=score, operation=operation)
-hint(hint_title='מספר החדר שלך פחות מספר החדר שלי:', hint_text='',col=col1, score=score, operation = operation)
-hint(hint_title='וצאפ ששלחת פעם אלי', hint_text='בפאטיו בצד ימין, מחכים רק לך',col=col2, score=score, operation = operation)
-hint(hint_title='וצאפ ששלחתי פעם אליך', hint_text='ערערתי וקיבלתי אישור לא להיכנס לבידוד (:',col=col2, score=score, operation = operation)
-hint(hint_title='מכר משותף שלנו', hint_text='המנהל שלי לשעבר למד איתך בתואר הראשון',col=col2, score=score, operation = operation)
+score = hint(hint_title='מספר הקילומטרים בין הבית שלך לבית שלי', hint_text='100', col=col1, score=score, operation=operation)
+score = hint(hint_title='מספר האותיות המשותפות לשמות הפרטיים שלנו:', hint_text='1',col=col1, score=score, operation=operation)
+score = hint(hint_title='מספר החדר שלך פחות מספר החדר שלי:', hint_text='',col=col1, score=score, operation = operation)
+score = hint(hint_title='וצאפ ששלחת פעם אלי', hint_text='בפאטיו בצד ימין, מחכים רק לך',col=col2, score=score, operation = operation)
+score = hint(hint_title='וצאפ ששלחתי פעם אליך', hint_text='ערערתי וקיבלתי אישור לא להיכנס לבידוד (:',col=col2, score=score, operation = operation)
+score = hint(hint_title='מכר משותף שלנו', hint_text='המנהל שלי לשעבר למד איתך בתואר הראשון',col=col2, score=score, operation = operation)
 # hint(hint_title='', hint_text='',col=col3, score=score, operation = operation)
 # hint(hint_title='', hint_text='',col=col3, score=score, operation = operation)
 # hint(hint_title='', hint_text='',col=col3, score=score, operation = operation)
