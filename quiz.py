@@ -6,7 +6,7 @@ def hint(hint_title, hint_text, col, score):
         score = score - 10
         operation.header(score)
     else:
-        col1.header('********')
+        col.header('********')
 
 st.title('חידה')
 st.write('הוראות: עליך לנחש מי מחברי התחום כתב לך את החידה הזאת')
