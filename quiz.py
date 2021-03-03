@@ -39,10 +39,6 @@ hint(hint_title='מכר משותף שלנו', hint_text='המנהל שלי לש�
 # hint(hint_title='', hint_text='',col=col3, score=score)
 # hint(hint_title='', hint_text='',col=col3, score=score)
 # hint(hint_title='', hint_text='',col=col3, score=score)
-if col1.checkbox():
-    score = score - 10
-    operation.header(score)
-else:
-    col1.header('-')
+
 
 
