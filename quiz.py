@@ -36,7 +36,7 @@ else:
 #     pre_selected_person = str(selected_person)
 
 col1, col2 = st.beta_columns(2)
-st.sidebar.
+
 score = hint(hint_title='מספר הקילומטרים בין הבית שלך לבית שלי', hint_text='100', col=col1, score=score, operation=operation)
 score = hint(hint_title='מספר האותיות המשותפות לשמות הפרטיים שלנו:', hint_text='1',col=col1, score=score, operation=operation)
 score = hint(hint_title='מספר החדר שלך פחות מספר החדר שלי:', hint_text='',col=col1, score=score, operation = operation)
