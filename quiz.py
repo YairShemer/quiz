@@ -15,12 +15,13 @@ st.write('יש לך 100 נקודות לצורך כך')
 st.write('כל ניחוש מוריד 30 נקודות')
 st.write('כל רמז מוריד 10 נקודות (לחץ על הרמז שברצונך לקבל)')
 score = 100
+operation = st.sidebar.subheader('מספר הנקודות שנותרו לך')
+operation = st.sidebar.header(score)
 persons_list = ['איל', 'תמר', 'קובי', 'פוני', 'נדב', 'מאיה', 'מתן ג', 'מתן ב', 'בוריס', 'אלון', 'בוריס', 'אשרי', 'יאיר', 'תמר', 'בועז', 'משה', 'בוריס', 'מאיר']
 defult_selection = ['לא ניחשת עדיין']
 defult_selection.extend(persons_list)
 selected_person = st.sidebar.radio('מי אני?', defult_selection)
-operation = st.sidebar.subheader('מספר הנקודות שנותרו לך')
-operation = st.sidebar.header(score)
+
 
 pre_selected_person = str(selected_person)
 if selected_person == 'יאיר':
