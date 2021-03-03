@@ -1,84 +1,48 @@
 import streamlit as st
 
+def hint(hint_title, hint_text, col, score):
+    if col.checkbox(hint_title):
+        col.header(hint_text)
+        score = score - 10
+        operation.header(score)
+    else:
+        col1.header('********')
+
 st.title('חידה')
 st.write('הוראות: עליך לנחש מי מחברי התחום כתב לך את החידה הזאת')
 st.write('יש לך 100 נקודות לצורך כך')
 st.write('כל ניחוש מוריד 30 נקודות')
 st.write('כל רמז מוריד 10 נקודות (לחץ על הרמז שברצונך לקבל)')
-x = 100
-operation2 = st.sidebar.selectbox('מי אני?', ['לא ניחשת עדיין','איל','איל','איל','איל','איל','יאיר','איל','איל', 'מיה', 'אלון', 'בוריס'])
+score = 100
+selected_person = st.sidebar.selectbox('מי אני?', ['לא ניחשת עדיין', 'איל', 'תמר', 'קובי', 'פוני', 'נדב', 'מאיה', 'מתן ג', 'מתן ב', 'בוריס', 'אלון', 'בוריס', 'אשרי', 'יאיר', 'תמר', 'בועז', 'משה', 'בוריס', 'מאיר'])
 operation = st.sidebar.subheader('מספר הנקודות שנותרו לך')
-operation = st.sidebar.header(x)
+operation = st.sidebar.header(score)
 
-if operation2 == 'יאיר':
+pre_selected_person = selected_person
+if selected_person == 'יאיר':
     st.sidebar.text('כל הכבוד!')
-elif operation2 == 'לא ניחשת עדיין':
+elif selected_person == pre_selected_person:
     pass
-elif operation2:
-    x = x - 30
-    operation.header(x)
+elif selected_person != pre_selected_person:
+    score = score - 30
+    operation.header(score)
+    pre_selected_person = selected_person
 
-# num_of_km = '-'
-# common_privet = '-'
-#
-# # st.text_area('1')
-# # st.text_area('2')
-col1, col2, col3 = st.beta_columns(3)
-# col1.header('sdfsdf1')
+col1, col2 = st.beta_columns(3)
 
-
-# col2.header('sdfsdf2')
-# if st.checkbox('Show raw data'):
-#     st.subheader('Raw data')
-#     st.write('data')
-
-if col1.checkbox('מספר הקילומטרים בין הבית שלך לבית שלי'):
-    col1.header('100')
-    x = x - 10
-    operation.header(x)
+hint(hint_title='מספר הקילומטרים בין הבית שלך לבית שלי', hint_text='100', col=col1, score=score)
+hint(hint_title='מספר האותיות המשותפות לשמות הפרטיים שלנו:', hint_text='1',col=col1, score=score)
+hint(hint_title='מספר החדר שלך פחות מספר החדר שלי:', hint_text='',col=col1, score=score)
+hint(hint_title='וצאפ ששלחת פעם אלי', hint_text='בפאטיו בצד ימין, מחכים רק לך',col=col2, score=score)
+hint(hint_title='וצאפ ששלחתי פעם אליך', hint_text='ערערתי וקיבלתי אישור לא להיכנס לבידוד (:',col=col2, score=score)
+hint(hint_title='מכר משותף שלנו', hint_text='המנהל שלי לשעבר למד איתך בתואר הראשון',col=col2, score=score)
+# hint(hint_title='', hint_text='',col=col3, score=score)
+# hint(hint_title='', hint_text='',col=col3, score=score)
+# hint(hint_title='', hint_text='',col=col3, score=score)
+if col1.checkbox():
+    score = score - 10
+    operation.header(score)
 else:
     col1.header('-')
 
-if col1.checkbox('מספר האותיות המשותפות לשמות הפרטיים שלנו:'):
-    col1.header('1')
-    x = x - 10
-    operation.header(x)
-else:
-    col1.header('-')
-
-if col2.checkbox('מספר האותיות המשותפות לשמות המשפחה שלנו:'):
-    col2.header('1')
-    x = x - 10
-    operation.header(x)
-else:
-    col2.header('-')
-
-if col2.checkbox('מספר החדר שלך פחות מספר החדר שלי:'):
-    col2.header('2')
-    x = x - 10
-    operation.header(x)
-else:
-    col2.header('-')
-
-if col3.checkbox('הודעה ששלחת אלי:'):
-    col3.header('1')
-    x = x - 10
-    operation.header(x)
-else:
-    col3.header('-')
-
-if col3.checkbox('הודעה ששלחתי אליך:'):
-    col3.header('2')
-    x = x - 10
-    operation.header(x)
-else:
-    col3.header('-')
-    # st.write('data2')
-
-# if st.button('רמז: מספר הקילומטרים בין הבית שלך לבית שלי (בערך)'):
-#     col1.subheader('sdfsdf1')
-#
-# if st.button('מספר האותיות המשותפות לשמות הפרטיים שלנו:'):
-#     # common_privet = 1
-#     col2.subheader('sdfsdf2')
 
