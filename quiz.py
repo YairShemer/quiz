@@ -2,11 +2,11 @@ import streamlit as st
 
 def hint(hint_title, hint_text, col, score, operation):
     if col.checkbox(hint_title):
-        col.header(hint_text)
+        col.text(hint_text)
         score = score - 10
         operation.header(score)
     else:
-        col.header('********')
+        col.text('********')
     return score
 
 def person_checkbox(person, score):
