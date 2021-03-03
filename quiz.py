@@ -18,7 +18,7 @@ score = 100
 persons_list = ['איל', 'תמר', 'קובי', 'פוני', 'נדב', 'מאיה', 'מתן ג', 'מתן ב', 'בוריס', 'אלון', 'בוריס', 'אשרי', 'יאיר', 'תמר', 'בועז', 'משה', 'בוריס', 'מאיר']
 defult_selection = ['לא ניחשת עדיין']
 defult_selection.extend(persons_list)
-selected_person = st.sidebar.selectbox('מי אני?', defult_selection)
+selected_person = st.sidebar.radio('מי אני?', defult_selection)
 operation = st.sidebar.subheader('מספר הנקודות שנותרו לך')
 operation = st.sidebar.header(score)
 
@@ -28,7 +28,7 @@ if selected_person == 'יאיר':
 else:
     for person in persons_list:
         if selected_person == person:
-            score = score - 30
+            score = score - 50
             operation.header(score)
 # elif selected_person == pre_selected_person:
 #     pass
