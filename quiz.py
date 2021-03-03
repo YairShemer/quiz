@@ -10,11 +10,12 @@ def hint(hint_title, hint_text, col, score, operation):
     return score
 
 def person_checkbox(person, score):
-    if st.sidebar.checkbox(person) != 'יאיר':
-        score = score - 30
-        operation.header(score)
-    else:
-        st.sidebar.header('כל הכבוד!!')
+    if st.sidebar.checkbox(person):
+        if  person!= 'יאיר':
+            score = score - 30
+            operation.header(score)
+        else:
+            st.sidebar.header('כל הכבוד!!')
     return score
 
 
