@@ -9,18 +9,22 @@ def hint(hint_title, hint_text, col, score, operation):
         col.header('********')
     return score
 
+def nice_text(text):
+    return "<h1 style='text-align: center; color: red;'>{}</h1>".format(text)
+
 st.title('חידה')
 st.write('הוראות: עליך לנחש מי מחברי התחום כתב לך את החידה הזאת')
 st.write('יש לך 100 נקודות לצורך כך')
-st.write("<h1 style='text-align: center; color: red;'>כל ניחוש מוריד 30 נקודות</h1>", unsafe_allow_html=True)
+st.write(nice_text("כל ניחוש מוריד 30 נקודות"), unsafe_allow_html=True)
 st.write('כל רמז מוריד 10 נקודות (לחץ על הרמז שברצונך לקבל)')
 score = 100
 operation = st.sidebar.subheader('מספר הנקודות שנותרו לך')
 operation = st.sidebar.header(score)
 persons_list = ['איל', 'קובי', 'פוני', 'נדב', 'מאיה', 'מתן ג', 'מתן ב', 'אלון', 'אשרי', 'יאיר', 'תמר', 'בועז', 'משה', 'בוריס', 'מאיר']
-defult_selection = ['לא ניחשת עדיין']
-defult_selection.extend(persons_list)
-selected_person = st.sidebar.radio('מי אני?', defult_selection)
+selection_list = ['לא ניחשת עדיין']
+selection_list.extend(persons_list)
+
+selected_person = st.sidebar.radio('מי אני?', selection_list)
 
 
 pre_selected_person = str(selected_person)
