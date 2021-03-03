@@ -25,7 +25,8 @@ selected_person = st.sidebar.radio('מי אני?', defult_selection)
 
 pre_selected_person = str(selected_person)
 if selected_person == 'יאיר':
-    st.sidebar.text('כל הכבוד!')
+    operation.header('כל הכבוד!!')
+
 else:
     for person in persons_list:
         if selected_person == person:
