@@ -29,7 +29,7 @@ st.write(nice_text("כל רמז מוריד 10 נקודות (לחץ על הרמז
 score = 100
 operation = st.sidebar.subheader('מספר הנקודות שנותרו לך')
 operation = st.sidebar.header(score)
-persons_list = ['איל', 'קובי', 'פוני', 'נדב', 'מאיה', 'מתן ג', 'מתן ב', 'אלון', 'אשרי', 'יאיר', 'תמר', 'בועז', 'משה', 'בוריס', 'מאיר']
+persons_list = ['איל', 'קובי', 'פוני', 'נדב', 'דוד', 'מאיה', 'מתן ג', 'מתן ב', 'אלון', 'אשרי', 'יאיר', 'תמר', 'בועז', 'משה', 'בוריס', 'מאיר']
 # selection_list = ['לא ניחשת עדיין']
 # selection_list.extend(persons_list)
 selection_list = persons_list
