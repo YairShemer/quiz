@@ -12,7 +12,7 @@ def hint(hint_title, hint_text, col, score, operation):
 st.title('חידה')
 st.write('הוראות: עליך לנחש מי מחברי התחום כתב לך את החידה הזאת')
 st.write('יש לך 100 נקודות לצורך כך')
-st.write("<h1 style='text-align: center; color: red;'>כל ניחוש מוריד 30 נקודות</h1>")
+st.write("<h1 style='text-align: center; color: red;'>כל ניחוש מוריד 30 נקודות</h1>", unsafe_allow_html=True)
 st.write('כל רמז מוריד 10 נקודות (לחץ על הרמז שברצונך לקבל)')
 score = 100
 operation = st.sidebar.subheader('מספר הנקודות שנותרו לך')
