@@ -28,7 +28,7 @@ elif selected_person != pre_selected_person:
     operation.header(score)
     pre_selected_person = selected_person
 
-col1, col2 = st.beta_columns(3)
+col1, col2 = st.beta_columns(2)
 
 hint(hint_title='מספר הקילומטרים בין הבית שלך לבית שלי', hint_text='100', col=col1, score=score)
 hint(hint_title='מספר האותיות המשותפות לשמות הפרטיים שלנו:', hint_text='1',col=col1, score=score)
