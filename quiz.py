@@ -16,7 +16,7 @@ st.title('חידה')
 st.write('הוראות: עליך לנחש מי מחברי התחום כתב לך את החידה הזאת')
 st.write('יש לך 100 נקודות לצורך כך')
 st.write(nice_text("כל ניחוש מוריד 30 נקודות"), unsafe_allow_html=True)
-st.write(nice_text('כל רמז מוריד 10 נקודות (לחץ על הרמז שברצונך לקבל)', unsafe_allow_html=True))
+st.write(nice_text("כל רמז מוריד 10 נקודות (לחץ על הרמז שברצונך לקבל)", unsafe_allow_html=True))
 score = 100
 operation = st.sidebar.subheader('מספר הנקודות שנותרו לך')
 operation = st.sidebar.header(score)
