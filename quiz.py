@@ -22,7 +22,7 @@ def person_checkbox(person, score):
 def nice_text(text):
     return "<h2 style='text-align: center; color: blue;'>{}</h2>".format(text)
 
-st.write(nice_text(' (:צביקה, נחש מי מחברי התחום הכין לך את החידה הזאת'), unsafe_allow_html=True)
+st.write(nice_text(' :) צביקה, נחש מי מחברי התחום הכין לך את החידה הזאת'), unsafe_allow_html=True)
 st.write(nice_text('לצורך המשימה, יש לך 100 נקודות'), unsafe_allow_html=True)
 st.write(nice_text("כל ניחוש מוריד 30 נקודות"), unsafe_allow_html=True)
 st.write(nice_text("כל רמז מוריד 10 נקודות (לחץ על הרמזים שברצונך לחשוף)"), unsafe_allow_html=True)
