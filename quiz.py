@@ -20,7 +20,7 @@ def person_checkbox(person, score):
 
 
 def nice_text(text):
-    return "<h1 style='text-align: center; color: blue;'>{}</h1>".format(text)
+    return "<h2 style='text-align: center; color: blue;'>{}</h2>".format(text)
 
 st.title('חידה')
 st.write('הוראות: עליך לנחש מי מחברי התחום כתב לך את החידה הזאת')
