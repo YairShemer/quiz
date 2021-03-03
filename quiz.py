@@ -34,10 +34,10 @@ persons_list = ['איל', 'קובי', 'פוני', 'נדב', 'מאיה', 'מתן 
 selection_list = ['לא ניחשת עדיין']
 selection_list.extend(persons_list)
 
-selected_person = st.sidebar.radio('מי אני?', selection_list)
+# selected_person = st.sidebar.radio('מי אני?', selection_list)
 
 
-pre_selected_person = str(selected_person)
+# pre_selected_person = str(selected_person)
 # if selected_person == 'יאיר':
 #     operation.header('כל הכבוד!!')
 #
