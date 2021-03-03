@@ -55,6 +55,7 @@ for person in persons_list:
 col1, col2 = st.beta_columns(2)
 
 score = hint(hint_title='מספר הקילומטרים בין הבית שלך לבית שלי ', hint_text='37', col=col1, score=score, operation=operation)
+col1.empty()
 score = hint(hint_title='מספר האותיות המשותפות לשמותינו הפרטיים:', hint_text='1',col=col1, score=score, operation=operation)
 # score = hint(hint_title='מספר החדר שלך פחות מספר החדר שלי:', hint_text='',col=col1, score=score, operation = operation)
 score = hint(hint_title='וצאפ ששלחת פעם אלי', hint_text='בפאטיו בצד ימין, מחכים רק לך',col=col2, score=score, operation = operation)
