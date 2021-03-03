@@ -9,6 +9,15 @@ def hint(hint_title, hint_text, col, score, operation):
         col.header('********')
     return score
 
+def person_checkbox(person, score):
+    if st.sidebar.checkbox(person) != 'יאיר':
+        score = score - 30
+        operation.header(score)
+    else:
+        st.sidebar.header('כל הכבוד!!')
+    return score
+
+
 def nice_text(text):
     return "<h1 style='text-align: center; color: red;'>{}</h1>".format(text)
 
@@ -28,14 +37,13 @@ selected_person = st.sidebar.radio('מי אני?', selection_list)
 
 
 pre_selected_person = str(selected_person)
-if selected_person == 'יאיר':
-    operation.header('כל הכבוד!!')
+# if selected_person == 'יאיר':
+#     operation.header('כל הכבוד!!')
+#
+# else:
+for person in persons_list:
+    score = person_checkbox(person, score)
 
-else:
-    for person in persons_list:
-        if selected_person == person:
-            score = score - 50
-            operation.header(score)
 # elif selected_person == pre_selected_person:
 #     pass
 # elif selected_person != pre_selected_person:
