@@ -19,7 +19,7 @@ selected_person = st.sidebar.selectbox('מי אני?', ['לא ניחשת עדי�
 operation = st.sidebar.subheader('מספר הנקודות שנותרו לך')
 operation = st.sidebar.header(score)
 
-pre_selected_person = selected_person
+pre_selected_person = str(selected_person)
 if selected_person == 'יאיר':
     st.sidebar.text('כל הכבוד!')
 elif selected_person == pre_selected_person:
@@ -27,7 +27,7 @@ elif selected_person == pre_selected_person:
 elif selected_person != pre_selected_person:
     score = score - 30
     operation.header(score)
-    pre_selected_person = selected_person
+    pre_selected_person = str(selected_person)
 
 col1, col2 = st.beta_columns(2)
 
